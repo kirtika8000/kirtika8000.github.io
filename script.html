@@ -1,0 +1,65 @@
+// ================= MOBILE MENU =================
+
+function toggleMenu() {
+    const menu = document.querySelector(".nav-links");
+
+    if (menu) {
+        menu.classList.toggle("show");
+    }
+}
+
+
+// Close menu when a navigation link is clicked
+
+const navigationLinks = document.querySelectorAll(".nav-links a");
+
+navigationLinks.forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        const menu = document.querySelector(".nav-links");
+
+        if (menu) {
+            menu.classList.remove("show");
+        }
+
+    });
+
+});
+
+
+// ================= CONTACT FORM =================
+
+function submitEnquiry(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const car = document.getElementById("car").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const result = document.getElementById("form-message");
+
+    if (name === "" || phone === "") {
+
+        result.textContent =
+            "Please enter your name and phone number.";
+
+        result.style.color = "#e21b23";
+
+        return;
+    }
+
+    result.textContent =
+        "Thank you, " + name + "! Your enquiry has been submitted.";
+
+    result.style.color = "#159447";
+
+    console.log("Customer Name:", name);
+    console.log("Phone:", phone);
+    console.log("Car:", car);
+    console.log("Message:", message);
+
+    document.querySelector(".contact-form form").reset();
+}
