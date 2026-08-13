@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Kirtika Cars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">KIRTIKA <span>CARS</span></a>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="page-banner">
+        <div>
+            <p>GET IN TOUCH</p>
+            <h1>Contact Us</h1>
+        </div>
+    </section>
+
+    <section class="contact-section">
+
+        <div class="contact-information">
+
+            <p class="section-label">CONTACT KIRTIKA CARS</p>
+
+            <h2>Let's Find Your Car</h2>
+
+            <p>
+                Interested in a car or want more information?
+                Contact Kirtika Cars today.
+            </p>
+
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <h3>Phone</h3>
+                    <a href="tel:8000628571">8000628571</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                    <h3>Address</h3>
+                    <p>Arai Road, Kishangarh</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">👤</div>
+                <div>
+                    <h3>Owner</h3>
+                    <p>Kirtika Malakar</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contact-form">
+
+            <h2>Send an Enquiry</h2>
+
+            <form onsubmit="submitEnquiry(event)">
+
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+                <label for="car">Car Interested In</label>
+                <input
+                    type="text"
+                    id="car"
+                    placeholder="Enter car name"
+                >
+
+                <label for="message">Message</label>
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Write your message"
+                ></textarea>
+
+                <button type="submit" class="submit-btn">
+                    Send Enquiry
+                </button>
+
+            </form>
+
+            <p id="form-message"></p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h2>KIRTIKA <span>CARS</span></h2>
+        <p>Quality Cars • Trusted Service • Since 1992</p>
+
+        <p>📞 <a href="tel:8000628571">8000628571</a></p>
+        <p>📍 Arai Road, Kishangarh</p>
+    </div>
+
+    <div class="copyright">
+        © 2026 Kirtika Cars. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
